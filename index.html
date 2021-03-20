@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/92f36200e2.js" crossorigin="anonymous"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>		
+        <script src="js/script.js"></script>
+        <link href="css/styles.css" rel="stylesheet">
+        <title>Simple Geometry - Home</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+			<div class="row content">
+				<div class="col-xl-auto" id="sidebar">
+					<div class="header">
+						<div class="logo">
+							<img src="img/icon.png" alt="" id="icon">
+							<h1 class="pt-3"><a href="index.html">Simple Geometry</a></h1>
+						</div>
+						
+						<p>A taste of non-Euclidean Geometry</p>
+						Eric C. Marçal<br> 
+						<a href="mailto:ericcmarcal@gmail.com">ericcmarcal@gmail.com</a><br>						
+						<a href="https://www.facebook.com/hyuinn"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://github.com/Hyuinn"><i class="fab fa-github"></i></a>
+						<a href="https://www.youtube.com/channel/UCVB8jNfXsuh_ByZ1ktJJINA"><i class="fab fa-youtube"></i></a>
+						<a href="https://www.linkedin.com/in/eric-calazans-mar%C3%A7al-1b56ab197/"><i class="fab fa-linkedin"></i></a>
+						<a href="https://www.reddit.com/user/Hyuinn"><i class="fab fa-reddit-alien"></i></a> 
+						<a href="https://twitter.com/Hyuinn"><i class="fab fa-twitter"></i></a>
+					</div>
+					<div class="theme-buttons" title="Change Theme Color">
+						<button type="button" class="btn btn-sm btn-theme" id="red"></button>
+						<button type="button" class="btn btn-sm btn-theme" id="green"></button>
+						<button type="button" class="btn btn-sm btn-theme" id="blue"></button>
+						<button type="button" class="btn btn-sm btn-theme" id="black"></button>
+					</div>	
+					<button type="button" class="btn btn-sm btn-menu navbar-toggle" data-toggle="collapse" data-target="#menu">Summary</button>
+					<nav class="navbar p-0">
+						<div class="collapse navbar-collapse" id="menu"><hr>
+							<a href="euclidean.html">Euclidean Geometry</a>  
+							<ul>
+								<li><a href="euclidean.html#e1">The Elements and Euclid</a></li>
+								<li><a href="euclidean.html#e2">Euclid's Five Postulates</a></li>
+								<li><a href="euclidean.html#e3">The Parallel Postulate</a></li>
+								<li><a href="euclidean.html#e4">Ditching the 5th Postulate</a></li>    
+							</ul>
+							<a href="spherical.html">Spherical Geometry</a>
+							<ul>
+								<li><a href="spherical.html#s1">Measuring Distances</a></li>
+								<li><a href="spherical.html#s2">Concept of a Parallel</a></li>
+								<li><a href="spherical.html#s3">Application on Globe</a></li> 
+							</ul>
+							<a href="hyperbolic.html">Hyperbolic Geometry</a>
+							<ul>
+								<li><a href="hyperbolic.html#hb1">Hyperbolic Plane</a></li>
+								<li><a href="hyperbolic.html#hb2">Möbius Transformation</a></li>
+								<li><a href="hyperbolic.html#hb3">Hyperbolic Disc</a></li>       
+							</ul>                    
+						</div>
+					</nav>
+				</div>
+				<div class="col-xl section">
+                    <h2>Introduction</h2><hr>
+					<p>Hello and welcome to my website, Simple Geometry. Here we will talk about the history and basic ideas regarding 
+					non-Euclidean Geometry, which is a topic that fascinates me. To understand that we will look into history and see what
+					defined Euclidean Geometry, as well why and how mathematicians came to the discovery of this new and exciting geometry.</p>
+					<div class="alert alert-warning" role="alert">
+					<p class="mb-1">While I agree that the the subject of this site isn't "Simple" in the slightest, my goal here is to try to cover it in 
+					the simplest way possible, and hopefully turning this abstract concept into something most people can understand.</p>
+					</div>
+					<p>If you're interested, all references are linked at the bottom of this page as well some videos I recommend watching 
+					regarding not only the history of it but also how these different Geometries behave without any math pre-requisite.</p>
+					
+					<details><summary>Watch Extra Credits "The History of non-Euclidean Geometry"</summary>
+                    <div class="embed-responsive embed-responsive-16by9 my-3">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/?listType=playlist&list=PLhyKYa0YJ_5Dj3ZG-Qk9VfaCfo-Nh9S-2&ab_channel=ExtraCredits" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div></details>
+					<details><summary>Watch Numberphile videos about Hyperbolic Geometry</summary>
+					<div class="embed-responsive embed-responsive-16by9 my-3">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/?listType=playlist&list=PLTKqpzaYHfNpLgC6ebRKl9UKhPecn_kr-" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div></details>
+					<hr>
+					<div class="references">
+						<h3>References and External Links</h3>
+						<div class="row">
+							<div class="col-sm-auto"><ul class="mb-0">
+								<li><a href="https://www.ancient.eu/Euclid/" target="_blank">Image of Euclid</a></li>
+								<li><a href="https://www.storyofmathematics.com/19th_bolyai.html" target="_blank">Image of Bolyai and Lobachesvsky</a></li>
+								<li><a href="https://www.aps.org/publications/apsnews/201306/physicshistory.cfm" target="_blank">Image of Riemann</a></li>
+								<li><a href="https://anotherbloodybullshitblog.wordpress.com/2016/01/16/the-story-of-the-parallel-postulate/" target="_blank">Image of Euclid's Axioms</a></li>
+								<li><a href="http://abyss.uoregon.edu/~js/cosmo/lectures/lec15.html" target="_blank">Image of curvatures</a></li>							
+							</ul></div><div class="col-sm-auto"><ul class="mb-0">
+								<li><a href="https://en.wikipedia.org/wiki/Parallel_postulate" target="_blank">Parallel postulate</a>, Wikipedia</li>
+								<li><a href="https://en.wikipedia.org/wiki/M%C3%B6bius_transformation" target="_blank">Möbius Transformations</a>, also Wikipedia</li>
+								<li><a href="https://en.wikipedia.org/wiki/Isomorphism" target="_blank">Isomorphisms</a>, Wikipedia once more</li>
+								<li><a href="https://www.mathsisfun.com/algebra/vectors-dot-product.html" target="_blank">Dot Product</a>, MathsIsFun</li>	
+								<li><a href="https://flylib.com/books/en/2.366.1/hack_27_calculate_the_distance_between_points_on_the_earths_surface.html" target="_blank">Spherical trigonometry</a>, flylib</li>
+							</ul></div><div class="col-sm-auto"><ul class="mb-0">
+								<li><a href="https://www.mathjax.org/" target="_blank">MathJax</a>, used for math formulas</li>
+								<li><a href="https://www.geogebra.org/?lang=en" target="_blank">Geogebra</a>, used in <a href="spherical.html#globe">this image</a></li>
+								<li><a href="https://www.youtube.com/user/ExtraCreditz" target="_blank">Extra Credits</a> channel on YouTube</li>
+								<li><a href="https://www.youtube.com/user/numberphile" target="_blank">Numberphile</a> channel on YouTube</li>
+							</ul></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>

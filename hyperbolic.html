@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/92f36200e2.js" crossorigin="anonymous"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>		
+        <script src="js/script.js"></script>
+        <link href="css/styles.css" rel="stylesheet">
+        <title>Simple Geometry - Hyperbolic</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+			<div class="row content">
+				<div class="col-xl-auto" id="sidebar">
+					<div class="header">
+						<div class="logo">
+							<img src="img/icon.png" alt="" id="icon">
+							<h1 class="pt-3"><a href="index.html">Simple Geometry</a></h1>
+						</div>
+						<p>A taste of non-Euclidean Geometry</p>
+						Eric C. Marçal<br> 
+						<a href="mailto:ericcmarcal@gmail.com">ericcmarcal@gmail.com</a><br>
+						<a href="https://www.facebook.com/hyuinn"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://github.com/Hyuinn"><i class="fab fa-github"></i></a>
+						<a href="https://www.youtube.com/channel/UCVB8jNfXsuh_ByZ1ktJJINA"><i class="fab fa-youtube"></i></a>
+						<a href="https://www.linkedin.com/in/eric-calazans-mar%C3%A7al-1b56ab197/"><i class="fab fa-linkedin"></i></a>
+						<a href="https://www.reddit.com/user/Hyuinn"><i class="fab fa-reddit-alien"></i></a> 
+						<a href="https://twitter.com/Hyuinn"><i class="fab fa-twitter"></i></a>
+					</div>
+					<div class="theme-buttons" title="Change Theme Color">
+						<button type="button" class="btn btn-sm btn-theme" id="red"></button>
+						<button type="button" class="btn btn-sm btn-theme" id="green"></button>
+						<button type="button" class="btn btn-sm btn-theme" id="blue"></button>
+						<button type="button" class="btn btn-sm btn-theme" id="black"></button>
+					</div>	
+					<button type="button" class="btn btn-sm btn-menu navbar-toggle" data-toggle="collapse" data-target="#menu">Summary</button>
+					<nav class="navbar p-0">
+						<div class="collapse navbar-collapse" id="menu"><hr>
+							<a href="euclidean.html">Euclidean Geometry</a>  
+							<ul>
+								<li><a href="euclidean.html#e1">The Elements and Euclid</a></li>
+								<li><a href="euclidean.html#e2">Euclid's Five Postulates</a></li>
+								<li><a href="euclidean.html#e3">The Parallel Postulate</a></li>
+								<li><a href="euclidean.html#e4">Ditching the 5th Postulate</a></li>    
+							</ul>
+							<a href="spherical.html">Spherical Geometry</a>
+							<ul>
+								<li><a href="spherical.html#s1">Measuring Distances</a></li>
+								<li><a href="spherical.html#s2">Concept of a Parallel</a></li>
+								<li><a href="spherical.html#s3">Application on Globe</a></li> 
+							</ul>
+							<a href="hyperbolic.html">Hyperbolic Geometry</a>
+							<ul>
+								<li><a href="hyperbolic.html#hb1">Hyperbolic Plane</a></li>
+								<li><a href="hyperbolic.html#hb2">Möbius Transformation</a></li>
+								<li><a href="hyperbolic.html#hb3">Hyperbolic Disc</a></li>       
+							</ul>                    
+						</div>
+					</nav>
+				</div>
+				<div class="col-xl section">
+                    <h2>Hyperbolic Geometry</h2><hr>
+					<div class="alert alert-warning" role="alert">
+					<p>In Hyperbolic Geometry, there are two commonly used models: the Hyperbolic Plane and the Hyperbolic Disk.
+					We will talk briefly about both of them but we will need some results from 
+					<a href="https://en.wikipedia.org/wiki/M%C3%B6bius_transformation" target="_blank" class="alert-link">Möbius Transformations</a> that we won't cover in details.</p>
+					<p class="mb-0">One of such results is that those transformations build an <a href="https://en.wikipedia.org/wiki/Isomorphism" target="_blank" class="alert-link">Isomorphism</a> 
+					between the Hyperbolic Plane and the Hyperbolic Disk. To put it simply, an Isomorphism will preserve shapes and distances, 
+					so every result we achieve on one of them will be carried to the other as long as we're using 
+					Möbius Transformations to move from one to the other.</p>
+					</div>
+                    
+                    <h3 id="hb1">Hyperbolic Plane</h3>
+					<p>To construct the Hyperbolic Plane we begin by describing points and lines without any reference to distance.<br>
+                    Lets take the upper half-plane \( H = \{x + iy \text{ }; y > 0\} \) in \( \mathbb{C} \) as our Hyperbolic Plane. <br>
+                    Notice that the \(x\)-axis (horizontal axis) is NOT part of \(H\).<br>
+					A Hyperbolic Line will be a semicircle in \(H\) whose center lies in \( \mathbb{R} \) and are orthogonal to \( \mathbb{R} \).<br>
+                    However we must also regard 'straight lines' that are perpendicular to \( \mathbb{R} \) as our hyperbolic lines.</p>
+					<img src="img/hplane.png" class="center-align" alt="Hyperbolic Plane with lines" id="hplane">
+					<p>Since the horizontal axis is not part of our set, that means those semi-circles and lines in the image above don't intersect 
+					each other within our set, and therefore they are all parallel to one another.<br>
+					Unlike Elliptical Geometry, this breaks the Fifth Postulate by having too many Parallels (infinite in fact) instead of just one!</p>
+					
+					<h4 id="hb2">Möbius Transformation</h4>
+                    <p>A Möbius Transformation or Möbius Map is a function \(f\) of a complex variable that can be written in the form<br>
+                    \( f(z) = \displaystyle \frac{(az+b)}{(cz+d)} \) , where \( (ad-bc) \ne 0 \)</p>
+                    <p>Without getting into too many details about those, it suffices for us to know that this particular family of 
+					functions have the property of <b>mapping Lines into Lines or Circles</b> and <b>mapping Circles into Circles or Lines</b>.<br>
+					Knowing that, we can conclude that Möbius Transformation <b>maps Hyperbolic Lines into Hyperbolic Lines</b>.</p>
+                    
+                    <h3 id="hb3">Hyperbolic Disk</h3>
+                    <p class="mb-1">Our second Hyperbolic model is the unitary disk \( D = \{z \in \mathbb{C}; |z| &lt; 1\} \).</p>
+                    <p>Consider the following Möbius Transformation \( g(z) = \displaystyle \frac{(z-i)}{(z+i)} \).<br>
+					It maps \(H\) into \(D\), which means that our results on the plane \(H\) are carried over to the disk \(D\).</p>
+					<img src="img/hdisk.png" class="center-align" alt="Hyperbolic Disk with lines">
+					<p>The idea is that we somehow glued both ends of the \(x\)-axis from the \(H\) plane together<br>
+					This model (as any Hyperbolic one) also has infinite parallels to a given line that cross the same point that's outside of it.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

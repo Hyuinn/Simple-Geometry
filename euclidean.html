@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/92f36200e2.js" crossorigin="anonymous"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>		
+        <script src="js/script.js"></script>
+        <link href="css/styles.css" rel="stylesheet">
+        <title>Simple Geometry - Euclidean</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+			<div class="row content">
+				<div class="col-xl-auto" id="sidebar">
+					<div class="header">
+						<div class="logo">
+							<img src="img/icon.png" alt="" id="icon">
+							<h1 class="pt-3"><a href="index.html">Simple Geometry</a></h1>
+						</div>
+						<p>A taste of non-Euclidean Geometry</p>
+						Eric C. Marçal<br> 
+						<a href="mailto:ericcmarcal@gmail.com">ericcmarcal@gmail.com</a><br>
+						<a href="https://www.facebook.com/hyuinn"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://github.com/Hyuinn"><i class="fab fa-github"></i></a>
+						<a href="https://www.youtube.com/channel/UCVB8jNfXsuh_ByZ1ktJJINA"><i class="fab fa-youtube"></i></a>
+						<a href="https://www.linkedin.com/in/eric-calazans-mar%C3%A7al-1b56ab197/"><i class="fab fa-linkedin"></i></a>
+						<a href="https://www.reddit.com/user/Hyuinn"><i class="fab fa-reddit-alien"></i></a> 
+						<a href="https://twitter.com/Hyuinn"><i class="fab fa-twitter"></i></a>
+					</div>
+					<div class="theme-buttons" title="Change Theme Color">
+						<button type="button" class="btn btn-sm btn-theme" id="red"></button>
+						<button type="button" class="btn btn-sm btn-theme" id="green"></button>
+						<button type="button" class="btn btn-sm btn-theme" id="blue"></button>
+						<button type="button" class="btn btn-sm btn-theme" id="black"></button>
+					</div>
+					<button type="button" class="btn btn-sm btn-menu navbar-toggle" data-toggle="collapse" data-target="#menu">Summary</button>
+					<nav class="navbar p-0">
+						<div class="collapse navbar-collapse" id="menu"><hr>
+							<a href="euclidean.html">Euclidean Geometry</a>  
+							<ul>
+								<li><a href="euclidean.html#e1">The Elements and Euclid</a></li>
+								<li><a href="euclidean.html#e2">Euclid's Five Postulates</a></li>
+								<li><a href="euclidean.html#e3">The Parallel Postulate</a></li>
+								<li><a href="euclidean.html#e4">Ditching the 5th Postulate</a></li>    
+							</ul>
+							<a href="spherical.html">Spherical Geometry</a>
+							<ul>
+								<li><a href="spherical.html#s1">Measuring Distances</a></li>
+								<li><a href="spherical.html#s2">Concept of a Parallel</a></li>
+								<li><a href="spherical.html#s3">Application on Globe</a></li> 
+							</ul>
+							<a href="hyperbolic.html">Hyperbolic Geometry</a>
+							<ul>
+								<li><a href="hyperbolic.html#hb1">Hyperbolic Plane</a></li>
+								<li><a href="hyperbolic.html#hb2">Möbius Transformation</a></li>
+								<li><a href="hyperbolic.html#hb3">Hyperbolic Disc</a></li>       
+							</ul>                    
+						</div>
+					</nav>
+				</div>
+				<div class="col-xl section">
+					<h2>Euclidean Geometry</h2><hr>
+					<h3 id="e1">The Elements and Euclid</h3>
+					
+					<figure class="right-align">
+					<img src="img/euclid.jpg" alt="Euclid" id="euclid">
+					<figcaption>Euclid of Alexandria, <br>Greek Mathematician</figcaption>
+					</figure>
+					
+					<p><b>The Elements</b> is a collection of definitions, 
+					postulates (axioms), propositions (theorems and constructions), 
+					and mathematical proofs of the propositions. It consists of 13 books 
+					attributed to the greek mathematician Euclid at 300BC.</p>
+					
+					<p>Although many of Euclid's results had been stated by earlier mathematicians, 
+					Euclid was the first to show how these propositions could fit into a comprehensive deductive and logical system.<br>
+					His work stayed on top of the logical rigor for over two thousand years,
+					being the second most published book in history and served as the 
+					root of almost all mathematical branches.</p>
+					
+					<h3 id="e2">Euclid's Five Postulates</h3>
+					<p>Near the beginning of the first book of the Elements, 
+					Euclid gives <b>five postulates</b> (axioms) for 
+					<b>Plane Geometry</b>, stated in terms of constructions:</p>
+					<ol>
+						<li>To draw a straight line from any point to any point.</li>
+						<li>To produce (extend) a finite straight line continuously in a straight line.</li>
+						<li>To describe a circle with any center and distance (radius).</li>
+						<li>That all right angles are equal to one another.</li>
+					</ol>	
+					<img src="img/p4.jpg" class="center-align" alt="Postulates 1 through 4">
+					<ol start=5>
+						<li>That, if a straight line falling on two straight lines make the interior 
+						angles on the same side less than two right angles, the two straight lines, 
+						if produced indefinitely, meet on that side on which are the angles less 
+						than the two right angles.</li>
+					</ol>		
+					<img src="img/p5.png" class="center-align" alt="Fifth Postulate">
+					
+					<h3 id="e3">The Parallel Postulate</h3>
+					<figure class="right-align">
+					<img src="img/john-playfair.jpeg" alt="John Playfair" id="playfair">
+					<figcaption>John Playfair, <br>Scottish Mathematician</figcaption>
+					</figure>
+					
+					<p>This last postullate is more commonly known today by it's equivalent, <i>Playfair's Axiom</i>, 
+					named after the scottish John Playfair, and says as follows:</p>
+					<ol start=5>
+						<li><b>In a plane, given a line and a point outside of it, there is only one 
+						parallel line to the given line that crosses the given point.</b></li>
+					</ol>
+					<img src="img/p5-a.jpg" class="center-align" alt="Playfair's Axiom">
+					
+					<p>For two thousand years, many attempts were made to prove the parallel postulate using Euclid's first four postulates. 
+					The main reason that such a proof was so highly sought after was that, unlike the first four postulates, 
+					the parallel postulate is not self-evident.</p>
+					
+					<p>Many attempts were made to prove the fifth postulate from the other four, 
+					many of them being accepted as proofs for long periods of time until the mistake was found.
+					Invariably the mistake was assuming some 'obvious' property which turned out to be equivalent to the fifth postulate (Playfair's axiom).</p>
+					
+					<h3 id="e4">Ditching the 5th Postulate</h3>
+					<p>After centuries trying to prove Euclid's fifth postulate without success, some mathematicians began trying to prove it by absurdity.
+					If they could could that the other alternatives implied by the fifth postulate were false, then that postulate would be true.
+					It was then that they have began to discover new Geometries.</p>
+					
+					<figure class="right-align">
+					<img src="img/bolyai-lobach.jpg" alt="Bolyai and Lobachevsky" id="bolyai-lobach">
+					<figcaption>János Bolyai on the left, <br>Nikolai Ivanovich Lobachevsky on the right</figcaption>
+					</figure>
+					
+					<p>In the beginning of the 19th century, Carl Friedrich Gauss and Ferdinand Karl Schweikart (1813 and 1818 respectively) 
+					had the germinal ideas of non-Euclidean geometry worked out, but neither published any results.</p>
+					
+					<p>Then, around 1830, the Hungarian mathematician János Bolyai and the Russian mathematician Nikolai Ivanovich Lobachevsky 
+					separately published treatises on hyperbolic geometry. Consequently, hyperbolic geometry is called Bolyai-Lobachevskian geometry, 
+					as both mathematicians, independent of each other, are the basic authors of non-Euclidean geometry.</p>
+					
+					<p>Later in 1854, Bernhard Riemann, founded the field of Riemannian Geometry in a famous lecture, 
+					discussing in particular the ideas now called manifolds, Riemannian metric, and curvature.
+					He argued we can do Geometry on any surface, regardless of it's shape, as long as we know how to measure length in this surface. 
+					A curve would be measured using calculus, and the distance between two points would be the shortest curve between them.</p>
+					
+					<figure class="right-align">
+					<img src="img/riemann.jpg" alt="Riemann" id="riemann">
+					<figcaption>Bernhard Riemann, <br>German mathematician</figcaption>
+					</figure>
+					
+					<p class="mb-1">Aditionally, the concept of curvature separated the (now infinite) Geometries into three groups:</p><ul>
+						<li><a href="euclidean.html">Euclidean</a> or Plane Geometry, which have no curvature \((c = 0)\)</li>
+						<li>Elliptic and <a href="spherical.html">Spherical</a> Geometries, which have positive curvature \((c > 0)\)</li>
+						<li><a href="hyperbolic.html">Hyperbolic</a> Geometries, which have negative curvature \((c &lt; 0)\)</li>
+					</ul><img src="img/universe_geometry.gif" class="center-align" alt="Types of curvatures">
+				</div>
+			</div>
+        </div>
+	</body>
+</html>

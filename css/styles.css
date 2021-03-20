@@ -1,0 +1,196 @@
+hr {
+    border-top: 1px solid LightGrey;
+}
+
+td, tr {
+	margin: 0px;
+	padding: 0px;
+}
+
+details {
+	margin-bottom: 1rem;
+	font-weight: 600;
+}
+
+figure {
+	display: inline-block;
+	margin: auto;
+	padding-bottom: 1rem;
+	padding-left: 2rem;
+}
+
+figcaption {
+	font-size: 12px;
+	font-style: italic;
+	text-align: center;
+	background-color: LightGrey;
+	border: 1px solid Grey;
+}
+
+.red, #red {
+	--theme-color: DarkRed;
+	--button-color: Red;
+	--font-color: #721c24;
+	--keyword: danger;	
+}
+
+.green, #green {
+	--theme-color: DarkGreen;
+	--button-color: Green;
+	--font-color: #155724;
+	--keyword: success;	
+}
+
+.blue, #blue, :root {
+	--theme-color: DarkBlue;
+	--button-color: Blue;
+	--font-color: #004085;
+	--keyword: primary;	
+}
+
+.black, #black {
+	--theme-color: Black;
+	--button-color: Black;
+	--font-color: #1b1e21;
+	--keyword: dark;	
+}
+
+.content {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	width: 100%;
+}
+
+.section {
+	padding: 3rem 2rem;
+	margin-bottom: 100%;
+	max-width: 1248px;
+	z-index: 0;
+}
+
+.section a {
+	font-weight: 600;
+	color: var(--font-color);
+}
+
+.center-align {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 65%;
+}
+
+.right-align {
+	float: right;
+	display: block;
+}
+
+.references li {
+	font-size: 12px;
+}
+
+.theme-buttons {
+	float: right;
+	margin-top: 35px;
+}
+
+.btn-theme {
+	color: White;
+	border: 1px solid Grey;
+	float: left;
+	width: 20px;
+	height: 20px;
+	border-radius: 0px;
+}
+
+.btn-menu {
+    color: White;
+	border: 1px solid Grey;
+	margin-top: 1.75rem;
+}
+
+.btn-menu:hover, .btn-theme:hover {
+	color: White;
+    border: 1px solid White;
+}
+
+.btn-menu:active, .active, .active:hover {
+	color: var(--theme-color);
+	background-color: White;
+}
+
+#sidebar {
+    background-color: var(--theme-color);
+    color: White;
+    padding: 2rem;
+	float: left;
+	z-index: 100;
+}
+
+#sidebar a {
+    color: White;
+    text-decoration: none;
+}
+
+#sidebar a:hover {
+    color: White;
+    text-decoration: underline;
+}
+
+#sidebar li {
+	font-size: 12.5px;
+}
+
+#icon {
+    float: right;
+    width: 160px;
+    height: auto;
+    min-width: 3rem;
+    min-height: 3rem;
+	max-width: 160px;
+	margin-right: 1rem;
+	margin-top: 1rem;
+}
+
+#euclid, #bolyai-lobach {
+	height: 160px;
+	float: right;
+}
+
+#playfair, #riemann {
+	height: 180px;
+	float: right; 
+}
+
+#haversines {
+	max-width: 21%;
+	float: right;
+	padding-left: 1rem;
+	margin-right: -0.5rem;
+}
+
+#triangle, #globe, #hplane {
+	height: 300px;
+}
+
+#red, #green, #blue, #black {
+	background-color: var(--button-color);
+}
+
+@media screen and (min-width: 1024px) {
+	.theme-buttons {margin-top: -20px;}
+	.btn-menu {display: none;}
+	.content{width: 67.79%;}
+	.section {left: 348px;}
+	#menu {display: inline;}
+	#icon {margin-right: 0rem; width: 28%;}
+	#sidebar {
+		position: fixed;
+		width: 348px;
+		left: 0;
+		top: 0px;
+		bottom: 0px;
+		overflow-y: auto;
+	}
+}
